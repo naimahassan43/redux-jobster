@@ -79,7 +79,7 @@ const Register = () => {
           onClick={onSubmit}
           disabled={isLoading}
         >
-          submit
+          {isLoading ? "loading..." : "submit"}
         </button>
         <p>
           {values.isMember ? "Not yet registered?" : "Already a member?"}
