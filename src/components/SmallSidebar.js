@@ -4,7 +4,7 @@ import Wrapper from "../assets/wrappers/SmallSidebar";
 const SmallSidebar = () => {
   return (
     <Wrapper>
-      <div>SmallSidebar</div>;
+      <div>SmallSidebar</div>
     </Wrapper>
   );
 };
