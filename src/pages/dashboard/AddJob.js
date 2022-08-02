@@ -3,7 +3,7 @@ import { FormRow, FormRowSelect } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
-import { handleChange } from "../../features/job/jobSlice";
+import { clearValues, handleChange } from "../../features/job/jobSlice";
 
 const AddJob = () => {
   const {
@@ -81,7 +81,7 @@ const AddJob = () => {
             <button
               type="button"
               className="btn btn-block clear-btn"
-              onClick={() => console.log("clear values")}
+              onClick={() => dispatch(clearValues())}
             >
               clear
             </button>
