@@ -11,6 +11,7 @@ const JobsContainer = () => {
 
   useEffect(() => {
     dispatch(getAllJobs());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
@@ -30,7 +31,6 @@ const JobsContainer = () => {
       <h5>jobs info</h5>
       <div className="jobs">
         {jobs.map((job) => {
-          console.log(job);
           return <Job key={job._id} {...job} />;
         })}
       </div>
