@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { FormRow, FormRowSelect } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
@@ -43,7 +44,9 @@ const AddJob = () => {
   };
 
   useEffect(() => {
-    dispatch(handleChange({ name: "jobLocation", value: user.location }));
+    if (!isEditing) {
+      dispatch(handleChange({ name: "jobLocation", value: user.location }));
+    }
   }, []);
   return (
     <Wrapper>
